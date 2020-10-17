@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\___PROJECTS\@ProjectManagement\CODE\ExpoManager\ExpoManager\obj\Debug\
+D:\___PROJECTS\@ProjectManagement\_PM_repo\ExpoManager\obj\Debug\
 ExpoManager
 none
 false
 DEBUG;TRACE
-D:\___PROJECTS\@ProjectManagement\CODE\ExpoManager\ExpoManager\App.xaml
+D:\___PROJECTS\@ProjectManagement\_PM_repo\ExpoManager\App.xaml
 31146688738
 2-1487744966
-8-1714834662
-140-1159901981
+9-746907601
+1401887713617
 Views\LoginWindow.xaml;Views\MainWindow.xaml;Views\Tabs\tabProjects.xaml;
 
-False
+True
 
