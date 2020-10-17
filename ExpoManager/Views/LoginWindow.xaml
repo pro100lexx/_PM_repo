@@ -1,0 +1,66 @@
+﻿<Window x:Class="ExpoManager.Views.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExpoManager.Views"
+        mc:Ignorable="d"
+        Title="Expo Manager - Login" Height="342" Width="617" ResizeMode="NoResize" Icon="/ExpoManager;component/DesignSource/pics/expo_icon.png" WindowStartupLocation="CenterScreen" Background="#FF4E5B79" WindowStyle="None">
+    <DockPanel>
+        <Grid DockPanel.Dock="Left" Width="359">
+            <Border Background="#FF65769B" CornerRadius="15" Margin="25"/>
+            <Image Source="/ExpoManager;component/DesignSource/pics/scheme_2.png" OpacityMask="Black" Margin="0,0,0,46" Width="218" Height="226"/>
+            <Label Content="EXPO Manager © 2020" HorizontalContentAlignment="Center" FontSize="34" Foreground="#FFE6E6E6" FontFamily="/ExpoManager;component/DesignSource/fonts/#AC Line" VerticalAlignment="Bottom" Margin="0,0,0,35"/>
+        </Grid>
+        <Grid DockPanel.Dock="Right">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="25"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="48"/>
+                <RowDefinition Height="104"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Content="АВТОРИЗАЦИЯ" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="/ExpoManager;component/DesignSource/fonts/#EuropeExt" Foreground="#FFE6E6E6" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="32"/>
+            <Button x:Name="buttonClose" Grid.Column="1" Width="17" Height="17" VerticalAlignment="Top" Margin="4" Content="x" FontWeight="Bold" Padding="-4" Click="buttonClose_Click"/>
+            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" TextWrapping="Wrap" Grid.Row="1" FontFamily="/ExpoManager;component/DesignSource/fonts/#AC Line" Foreground="Coral" FontSize="18" TextAlignment="Center" Width="170">
+            Для входа в приложение введите логин и пароль
+            </TextBlock>
+            <Label Grid.Row="2" Content="Логин" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="/ExpoManager;component/DesignSource/fonts/#FontAwesome" Foreground="#FFE6E6E6" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="{x:Null}"/>
+            <TextBox x:Name="loginBox" Grid.Row="3" FontSize="16" TextAlignment="Center" Text="Admin"/>
+            <Label  Grid.Row="4" Content="Пароль" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="/ExpoManager;component/DesignSource/fonts/#FontAwesome" Foreground="#FFE6E6E6" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <PasswordBox x:Name="passBox" Grid.Row="5" FontSize="16" MaxLength="32" PasswordChar="•" Password="qazzaq87" HorizontalContentAlignment="Center" />
+            <!--<Button x:Name="confirmButton" Grid.Row="7" Background="#FF236215" Width="160" Height="40" VerticalAlignment="Top" Content="Войти" FontFamily="/ExpoManager;component/DesignSource/fonts/#EuropeExt" FontSize="20" Foreground="#FFE6E6E6" Click="confirmButtonClick">-->
+            <Button x:Name="confirmButton" Grid.Row="7" FontFamily="/ExpoManager;component/DesignSource/fonts/#EuropeExt" FontSize="20" Foreground="#FFE6E6E6" Click="confirmButtonClick">
+                <Button.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate>
+                                    <Border Name="Border" Background="#FF236215" VerticalAlignment="Top" Height="40" BorderThickness="0" CornerRadius="10" HorizontalAlignment="Center" Padding="30,0,30,0">
+                                        <ContentPresenter Name="ConPres" Content="Войти" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="Border" Property="Background" Value="#FF318020"/>
+                                        </Trigger>
+                                        <Trigger Property="Button.IsPressed" Value="True">
+                                            <Setter TargetName="Border" Property="Background" Value="#FF1F5314"/>
+                                            <Setter TargetName="ConPres" Property="Content" Value="connecting..."/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+    </DockPanel>
+</Window>
