@@ -33,11 +33,11 @@
             Для входа в приложение введите логин и пароль
             </TextBlock>
             <Label Grid.Row="2" Content="Логин" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="/ExpoManager;component/DesignSource/fonts/#FontAwesome" Foreground="#FFE6E6E6" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="{x:Null}"/>
-            <TextBox x:Name="loginBox" Grid.Row="3" FontSize="16" TextAlignment="Center" Text="Admin"/>
+            <TextBox x:Name="loginBox" Grid.Row="3" FontSize="16" TextAlignment="Center" Text="admin"/>
             <Label  Grid.Row="4" Content="Пароль" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="/ExpoManager;component/DesignSource/fonts/#FontAwesome" Foreground="#FFE6E6E6" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
             <PasswordBox x:Name="passBox" Grid.Row="5" FontSize="16" MaxLength="32" PasswordChar="•" Password="qazzaq87" HorizontalContentAlignment="Center" />
             <!--<Button x:Name="confirmButton" Grid.Row="7" Background="#FF236215" Width="160" Height="40" VerticalAlignment="Top" Content="Войти" FontFamily="/ExpoManager;component/DesignSource/fonts/#EuropeExt" FontSize="20" Foreground="#FFE6E6E6" Click="confirmButtonClick">-->
-            <Button x:Name="confirmButton" Grid.Row="7" FontFamily="/ExpoManager;component/DesignSource/fonts/#EuropeExt" FontSize="20" Foreground="#FFE6E6E6" Click="confirmButtonClick">
+            <Button x:Name="confirmButton" Grid.Row="7" FontFamily="/ExpoManager;component/DesignSource/fonts/#EuropeExt" FontSize="16" Foreground="#FFE6E6E6" Click="confirmButtonClick">
                 <Button.Resources>
                     <Style TargetType="Button">
                         <Setter Property="Template">
