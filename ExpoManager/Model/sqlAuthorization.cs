@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Data;
-using System.Data.SqlClient;
+//using System.Data;
+//using System.Data.SqlClient;
 using System.Windows;
 using MySql.Data.MySqlClient;
 
@@ -59,10 +59,10 @@ namespace ExpoManager.Views
         private string GetConnectionString()
         {
             //string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + Environment.CurrentDirectory + "\\Model\\ExpoDB.mdf;Integrated Security=True";
-            //string myConnectionString = "Database=expo;Data Source=10.8.0.1;User Id=lexx;Password=f9FOYzH9LT1APb8K";
+            //string myConnectionString = "server=10.8.0.1;port=3306;User Id=mt_monitor;Password=aRXgaOp4UIcXvDDu";
 
             MySqlConnectionStringBuilder mysqlCSB = new MySqlConnectionStringBuilder();
-            mysqlCSB.Server = "10.8.0.1";             // IP адрес БД
+            mysqlCSB.Server = "185.246.65.19";        // IP адрес БД
             mysqlCSB.Port = 3306;                     // Порт
             mysqlCSB.Database = "expo";               // Имя БД
             mysqlCSB.UserID = "lexx";                 // Имя пользователя БД
